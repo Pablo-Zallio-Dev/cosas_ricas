@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond, Parisienne } from "next/font/google";
 import "./globals.css";
+import Header from "./components/uxui/header/Header";
+import Footer from "./footer/page";
 
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -32,9 +34,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorantGaramond.variable} ${inter.variable} ${parisienne.variable} h-full antialiased`}
+      className={`${cormorantGaramond.variable} ${inter.variable} ${parisienne.variable} h-full antialiased bg-bgPink`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+            <Header />
+            <main>{children}</main>
+            <Footer />
+      </body>
     </html>
   );
 }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond, Parisienne } from "next/font/google";
 import "./globals.css";
 import Header from "./components/uxui/header/Header";
-import Footer from "./footer/page";
+import Footer from "./components/uxui/footer/page";
 
 
 const cormorantGaramond = Cormorant_Garamond({

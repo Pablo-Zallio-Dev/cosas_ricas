@@ -1,14 +1,38 @@
 @import "tailwindcss";
 
 
+
+:root {
+      
+      --bg-White: #ffffff;
+      --foreground: #171717;
+      
+      --border:#e8dbd1;
+      --chocolate: #4c271a;
+      --cream: #fbf6ee;
+      --cream: #fbf6ee;
+      --gold: #D0B46F;
+      --paragraph: #6d5851;
+      --pink-primary: #ce3776;
+      --pink-bg: #FEF9F4;
+      --pink-icon: #FFE2E4;
+}
+
+
 @theme inline {
       --font-inter: var(--font-inter);
       --font-parisienne: var(--font-parisienne);
       --font-cormorantGaramond: var(--font-cormorant-garamond);
-}
+            
+      --color-bgWhite: var(--bg-White);
+      --color-pinkPrimary: var(--pink-primary);
+      --color-bgPink: var(--pink-bg);
+      --color-bgPinkIcon: var(--pink-icon);
+      --color-paragraph: var(--paragraph);
+      --color-border: var(--border);
+      --color-chocolate: var(--chocolate);
+      --color-cream: var(--cream);
+      --color-gold: var(--gold);
 
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
 }

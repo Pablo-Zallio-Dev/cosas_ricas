@@ -14,19 +14,19 @@ const isOpen = useBtnMenuMobile((state) => state.isOpen)
 console.log(isOpen)
 
       return(
-            <header className=" flex justify-between items-center h-20 px-5 border-b border-border ">
+            <header className=" fixed z-1000 flex justify-between items-center w-full h-20 px-5 xl:px-35 2xl:px-65 bg-bgPink border-b border-border ">
                   <Logo />
                   
                   {
                         !isOpen ? <BtnMenuMobile /> : <BtnCloseMenuMobile />
                   }
                   
-                  <section className={` absolute left-0 opacity-50 invisible ${ isOpen ?'top-20 z-1000 opacity-100 visible transition-all duration-800 ease-in-out ' :' top-30 opacity-0 invisible ' }  w-full `}>
+                  <section className={` absolute left-0 opacity-50  invisible ${ isOpen ?'top-20 z-1000 opacity-100 visible transition-all duration-800 ease-in-out ' :'  top-30 opacity-0 invisible ' }  w-full `}>
                         <MobileMenu  />
                   </section>
                   <DesktopMenu />
                   <section className=" hidden md:block ">
-                        <BtnPrimary linkText={"Galeria"} href={"/gallery"} />
+                        <BtnPrimary linkText={"Haz tu pedido"} href={"/contact"} />
                   </section>
             </header>
       )

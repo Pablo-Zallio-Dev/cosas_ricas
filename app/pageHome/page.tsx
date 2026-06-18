@@ -1,9 +1,15 @@
-import Hero from "./components/Hero";
+import AboutSection from "./components/AboutSection";
+import CategorySection from "./components/CategorySection";
+import HeroSection from "./components/HeroSection";
+import OrderSection from "./components/OrderSection";
 
-export default function PageHome(){
-      return(
+export default function PageHome() {
+      return (
             <>
-            <Hero />
+                  <HeroSection />
+                  <CategorySection />
+                  <AboutSection />
+                  <OrderSection />
             </>
       )
 }

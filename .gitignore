@@ -39,3 +39,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#https://docs.google.com/spreadsheets/d/19sHHBCT4YgiBTxawlmZLu5NcSR5npkSle23Tu_fftDs/edit?usp=sharing (enlace de drive)

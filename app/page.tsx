@@ -1,7 +1,9 @@
+import PageHome from "./pageHome/page";
+
 export default function Home() {
   return (
     <>
-      <h1 className="">Inicio</h1>
+      <PageHome />
     </>
   );
 }

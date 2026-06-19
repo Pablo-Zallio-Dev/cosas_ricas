@@ -2,21 +2,19 @@ import { LucideIcon } from "lucide-react";
 import Link from "next/link";
 
 export type BtnPrimaryProps = {
-      linkText?: string;
-      href?: string;
+      text?: string;
       icon?: LucideIcon;
       min?: boolean
 };
 
 export default function BtnPrimary({
-      linkText,
+      text,
       min,
-      href = '',
       icon: Icon,
 }: BtnPrimaryProps) {
       return (
-            <Link
-                  href={href}
+            <button
+            type="submit"
                   className={` 
              flex items-center gap-2 
       ${min ? ' w-min md:w-max ' : 'w-max'} py-3 px-6 
@@ -26,8 +24,8 @@ export default function BtnPrimary({
       md:transition-all md:duration-150
        `}
             >
-                  {linkText}
+                  {text}
                   {Icon && <Icon size={16} color="#4c271a" />}
-            </Link>
+            </button>
       );
 }

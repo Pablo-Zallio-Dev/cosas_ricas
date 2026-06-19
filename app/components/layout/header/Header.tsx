@@ -14,7 +14,7 @@ const isOpen = useBtnMenuMobile((state) => state.isOpen)
 console.log(isOpen)
 
       return(
-            <header className=" fixed z-1000 flex justify-between items-center w-full h-20 px-5 xl:px-35 2xl:px-65 bg-bgPink border-b border-border ">
+            <header className=" fixed z-1000 flex justify-between items-center w-full h-20 px-5 xl:px-35 2xl:px-65 bg-bgPink/50 border-b border-border backdrop-blur-3xl ">
                   <Logo />
                   
                   {

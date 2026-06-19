@@ -38,18 +38,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
             <Header />
-            <main  >{children}</main>
+            <main>{children}</main>
             <Footer />
       </body>
     </html>
   );
 }
 
-
-/* 
-
-
-  --font-inter: var(--font-inter);
-  --font-cormorantGaramond: var(--font-cormorant-garamond);
-  
-  */

@@ -14,7 +14,7 @@ export default function BtnSecondary( { linkText, href, icon:Icon }: BtnSecondar
                   href={href}
                   className=" 
                   w-max py-3 px-6 
-                  text-chocolate font-medium 
+                  text-chocolate font-medium font-inter
                   rounded-full 
                   md:hover:bg-cream
                   border border-border md:hover:border-gold

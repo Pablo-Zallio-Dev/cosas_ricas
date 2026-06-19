@@ -16,7 +16,7 @@ export default function CardCategories({ image, titleCard, textCard }: CardCateg
                   <section className="relative overflow-hidden w-full aspect-square h-70  ">
                         <Image src={image} alt={titleCard} fill className="object-cover transition-transform duration-700 group-hover:scale-110  " />
                   </section>
-                  <section className="  p-6 ">
+                  <section className=" flex flex-col gap-2  p-6 ">
                         <TitleCard titleCard={titleCard} />
                         <Paragraph textParagraph={textCard} textSize={"textCard"} />
                   </section>

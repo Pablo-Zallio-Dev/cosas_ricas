@@ -13,7 +13,8 @@ export default function CardInstagram() {
       lg:hover:-translate-y-0.5
       lg:hover:shadow-xl/10
       transition-all duration-150 "
-      href={""}
+      href={"https://www.instagram.com/cosasricas_.2/"}
+      target="_blank"
     >
       <section className=" flex gap-4 ">
         <div className=" bg-bgWhite p-3 rounded-full ">

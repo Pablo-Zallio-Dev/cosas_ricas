@@ -12,7 +12,7 @@ export default function BtnGallery({ textBtn, onClick, activeCategory, cat }: {
             <button
                   onClick={onClick}
                   className={`  w-max py-2 px-4 
-                  text-chocolate font-medium 
+                  text-chocolate font-medium font-inter text-sm
                   rounded-full 
                  
                   

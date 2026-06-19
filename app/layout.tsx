@@ -3,6 +3,7 @@ import { Inter, Cormorant_Garamond, Parisienne } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/header/Header";
 import Footer from "./components/layout/footer/page";
+import BtnFloatWhatsapp from "./pageHome/components/BtnFloatWhatsapp";
 
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -36,9 +37,11 @@ export default function RootLayout({
       lang="en"
       className={`${cormorantGaramond.variable} ${inter.variable} ${parisienne.variable} h-full antialiased bg-bgPink`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-bgPink">
             <Header />
             <main>{children}</main>
+                                    <BtnFloatWhatsapp />
+
             <Footer />
       </body>
     </html>

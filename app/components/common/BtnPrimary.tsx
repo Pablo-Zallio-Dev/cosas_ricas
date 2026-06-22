@@ -6,6 +6,7 @@ export type BtnPrimaryProps = {
       href?: string;
       icon?: LucideIcon;
       min?: boolean
+      iconMin?: boolean
 };
 
 export default function BtnPrimary({
@@ -13,6 +14,7 @@ export default function BtnPrimary({
       min,
       href = '',
       icon: Icon,
+      iconMin
 }: BtnPrimaryProps) {
       return (
             <Link
@@ -27,7 +29,7 @@ export default function BtnPrimary({
        `}
             >
                   {linkText}
-                  {Icon && <Icon size={16} color="#4c271a" />}
+                  {Icon && <Icon size={ !iconMin ? 16 : 24 } color="#4c271a" />}
             </Link>
       );
 }

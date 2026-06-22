@@ -3,7 +3,7 @@ import { Inter, Cormorant_Garamond, Parisienne } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/header/Header";
 import Footer from "./components/layout/footer/page";
-import BtnFloatWhatsapp from "./pageHome/components/BtnFloatWhatsapp";
+import BtnFloatWhatsapp from "./components/common/BtnFloatWhatsapp";
 
 
 const cormorantGaramond = Cormorant_Garamond({

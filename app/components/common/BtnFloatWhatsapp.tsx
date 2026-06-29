@@ -6,7 +6,7 @@ export default function BtnFloatWhatsapp() {
 
 
       return (
-            <Link className=" fixed bottom-5 md:bottom-16 right-5 md:right-16 p-1.5 md:p-3   rounded-full  bg-green-500 " href={`https://wa.me/${phoneNumber}`}  target="_blank"
+            <Link className=" fixed bottom-5 md:bottom-16 right-5 md:right-16 p-1.5 md:p-3   rounded-full  bg-green-500 " href={`https://wa.me/${phoneNumber}`} aria-label="Contactar por WhatsApp"   target="_blank"
       rel="noopener noreferrer">
                   <svg className="w-6.75 h-6.75 text-cream" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path fill="currentColor" fillRule="evenodd" d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z" clipRule="evenodd" />

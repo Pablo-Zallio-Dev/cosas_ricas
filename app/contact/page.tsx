@@ -1,8 +1,15 @@
+import { Metadata } from "next";
 import CardWhatsapp from "./components/CardWhatsapp";
 import Form from "./components/Form";
 import HeadSection from "./components/HeadSection";
 import InfoContact from "./components/InfoContact";
 import QuestionSection from "./components/QuestionSection";
+
+export const metadata: Metadata = {
+  title: "Cosas Ricas 2 - Contacto",
+  description: "Contacta con nosotros para cualquier duda",
+};
+
 
 export default function Contact() {
       return (

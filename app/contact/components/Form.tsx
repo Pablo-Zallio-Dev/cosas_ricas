@@ -7,8 +7,37 @@ import AlertFormInput from "./AlertFormInput";
 export default function Form() {
   const { register, formState: { errors }, reset , handleSubmit } = useForm();
 
-  const onSubmit = (data: object) => {
+  const onSubmit = async (data: object) => {
     console.log(data);
+
+    const formData = {
+      ...data,
+      access_key: "5de6d5e4-6d90-4eb6-8bc8-92a7b843af45" // 👈 Pega aquí tu llave
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert("¡Mensaje enviado con éxito!");
+        reset();
+      } else {
+        alert("Hubo un error al enviar.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Error de red.");
+    }
+
     reset()
   };
 

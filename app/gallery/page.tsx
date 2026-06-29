@@ -6,10 +6,13 @@ import TitleSection from "../components/common/TitleSection";
 import GalleryProducts from "./components/GalleryProducts";
 
 export const metadata: Metadata = {
-  title: "Cosas Ricas 2 - Galeria",
-  description: "Todos los productos puedes verlo en nuestra galeria",
-};
-
+title: 'Cosas Ricas 2 - Galeria',
+description: 'Pasteleria creativa y artesanal. Tartas personalizadas, pasteles y postres.',
+keywords: ['Pasteleria', 'Tartas', 'Postres', 'tartas para cumpleaños', 'tartas personalizadas'],
+openGraph:{
+      title:'Cosas Ricas 2 - Encuentra lo mejor en nuestra galeria de productos'
+}
+}
 
 export default function PageGallery(){
       return(

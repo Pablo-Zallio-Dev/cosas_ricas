@@ -25,10 +25,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
 title: 'Cosas Ricas 2 - Inicio',
-description: 'Pasteleria creativa y artesanal. Tartas personalizadas, pasteles, postres.',
+description: 'Pasteleria creativa y artesanal. Tartas personalizadas, pasteles y postres.',
 keywords: ['Pasteleria', 'Tartas', 'Postres', 'tartas para cumpleaños', 'tartas personalizadas'],
 openGraph:{
       title:'Cosas Ricas 2 - Tu pasteleria de confianza'
+      
 }
 }
 

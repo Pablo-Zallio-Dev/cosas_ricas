@@ -6,9 +6,13 @@ import InfoContact from "./components/InfoContact";
 import QuestionSection from "./components/QuestionSection";
 
 export const metadata: Metadata = {
-  title: "Cosas Ricas 2 - Contacto",
-  description: "Contacta con nosotros para cualquier duda",
-};
+title: 'Cosas Ricas 2 - Contacto',
+description: 'Pasteleria creativa y artesanal. Tartas personalizadas, pasteles y postres.',
+keywords: ['Pasteleria', 'Tartas', 'Postres', 'tartas para cumpleaños', 'tartas personalizadas'],
+openGraph:{
+      title:'Cosas Ricas 2 - Escribenos para resolver cualquier duda'
+}
+}
 
 
 export default function Contact() {

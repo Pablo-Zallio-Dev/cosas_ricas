@@ -39,7 +39,7 @@ export default function Footer() {
           <div className=" flex gap-3 ">
             <Phone size={20} color="#ce3776" />
             <p className=" font-inter text-chocolate text-sm ">
-              +34 600 36 35 35
+              +34 674 574 777
             </p>
           </div>
           <div className=" flex gap-3 ">
@@ -51,7 +51,7 @@ export default function Footer() {
           <div className=" flex gap-3 ">
             <MapPinCheckInside size={20} color="#ce3776" />
             <p className=" font-inter text-chocolate text-sm ">
-              Av. El vedat 132, Torrent, Valencia
+              Torrent, Valencia
             </p>
           </div>
         </section>

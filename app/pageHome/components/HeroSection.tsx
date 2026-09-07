@@ -18,9 +18,10 @@ export default function HeroSection() {
                               <h3 className=" text-chocolate  ">Pasteleria Artesanal</h3>
                         </section>
 
-                        <h1 className=" mt-6 font-cormorantGaramond text-5xl md:text-6xl lg:text-7xl ">Los sabores que <span className=" text-pinkPrimary italic ">hacen especiales</span> tus momentos</h1>
+                        <h1 className=" mt-6 font-cormorantGaramond text-5xl md:text-6xl lg:text-7xl ">Creamos momentos con sabor para tus días <span className=" text-pinkPrimary italic ">más especiales</span> </h1>
+                        <Paragraph textParagraph={"La pastelería artesanal es el corazón de nuestro obrador. Usamos ingredientes tradicionales para crear la tarta perfecta para ese momento especial que deseas celebrar con las personas que te rodean. "} textSize={"textLarge"} />
+                        <Paragraph textParagraph={"Un proyecto familiar, artesanal y hecho con cariño, donde cada elaboración busca conservar la esencia de siempre."} textSize={"textLarge"} />
 
-                        <Paragraph textParagraph={"En Cosas Ricas 2 horneamos cada receta como en casa: con mantequilla de verdad, ingredientes seleccionados y mucho cariño. Tartas para celebrar, dulces para regalar y momentos para guardar."} textSize={"textLarge"} />
 
                         <section className="flex flex-wrap gap-4 mt-10 ">
                               <BtnPrimary linkText={"Ver tartas"} href={"/gallery"} icon={ArrowRight} />

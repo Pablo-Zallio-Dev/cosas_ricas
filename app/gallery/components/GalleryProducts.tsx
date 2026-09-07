@@ -20,7 +20,8 @@ export default function GalleryProducts() {
     };
 
     load();
-  }, [setProduct]);
+}, [setProduct]);
+console.log(products)
   const categories = ["Todos", ...new Set(products.map((p) => p.category))];
 
   const filtered =
@@ -66,7 +67,7 @@ export default function GalleryProducts() {
           />
         ))}
       </section>
-      <section className=" flex flex-wrap  gap-8 lg:gap-24 justify-center ">
+      <section className=" flex flex-wrap  gap-8 lg:gap-18 justify-center ">
         {filtered.map((product) => (
           <CardGallery key={product.id} product={product} />
         ))}

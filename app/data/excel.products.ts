@@ -1,46 +1,39 @@
 import { Product } from "../store/useFilterStore";
 
-
 function parseDriveUrl(url: string): string {
-      const match = url.match(/\/d\/(.+?)\//)
-      if (!match) return url
-      return `https://drive.google.com/uc?export=view&id=${match[1]}`
+  if (!url || typeof url !== "string") return "/placeholder.png";
+
+  // Captura el ID de Google Drive en cualquier formato común
+  const match = url.match(/(?:d\/|id=)([\w-]+)/);
+  if (!match || !match[1]) return url;
+
+  return `https://drive.google.com/uc?export=view&id=${match[1]}`;
 }
 
 export default async function getProducts(): Promise<Product[]> {
-     
+  try {
+    console.log("Entro");
+    const response = await fetch("/api/products", { cache: "no-store" });
+    if (!response.ok) {
+      console.error(`Error en API /api/products: status ${response.status}`);
+      return [];
+    }
 
-      try {
-            console.log('Entro')
-            const response = await fetch("/api/products")
-            if (!response.ok) return []
+    const data: Product[] = await response.json();
 
-            const data: Product[] = await response.json()
-
-
-            return data.map((item) => ({
-                  ...item,
-                  image: parseDriveUrl(item.image),
-            }))
-
-
-      } catch (error) {
-            console.log(error)
-            return []
-      }
-
+    if (!Array.isArray(data)) {
+      console.error("La API no devolvió un array:", data);
+      return [];
+    }
+    return data.map((item) => ({
+      ...item,
+      image: parseDriveUrl(item.image),
+    }));
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* import { CategoryType, Product } from "@/app/store/useFilterStore"; // Asegúrate de tener esta interfaz
 

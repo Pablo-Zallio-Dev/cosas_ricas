@@ -1,79 +1,86 @@
 export interface Category {
-    id: string;
-    categoria: string;
-    descripcion: string;
-    imagenUrl: string;
-    orden: number;
-    activo: boolean;
+      id: string;
+      categoria: string;
+      descripcion: string;
+      imagenUrl: string;
+      orden: number;
+      activo: boolean;
+}
+
+function parseDriveUrl(url: string): string {
+      if (!url || typeof url !== "string") return "/images/logo.png";
+      const match = url.match(/(?:d\/|id=)([\w-]+)/);
+      if (!match || !match[1]) return url;
+      return `https://drive.google.com/uc?export=view&id=${match[1]}`;
 }
 
 export async function getCategoriesFromExcel(): Promise<Category[]> {
-    const URL_EXCEL_CSV = process.env.NEXT_PUBLIC_URL_CATEGORIES;
+      const URL_EXCEL_CSV = process.env.NEXT_PUBLIC_URL_CATEGORIES;
 
-    if (!URL_EXCEL_CSV) {
-        console.error("URL no definida");
-        return [];
-    }
+      if (!URL_EXCEL_CSV) {
+            console.error("URL no definida");
+            return [];
+      }
 
-    try {
-        const respuesta = await fetch(URL_EXCEL_CSV);
-        if (!respuesta.ok) throw new Error("Error al conectar");
+      try {
+            const respuesta = await fetch(URL_EXCEL_CSV);
+            if (!respuesta.ok) throw new Error("Error al conectar");
 
-        const textoCsv: string = await respuesta.text();
-        console.log(textoCsv)
-        return procesarCsv(textoCsv);
-    } catch (error) {
-        console.error(error);
-        return [];
-    }
+            const textoCsv: string = await respuesta.text();
+            console.log(textoCsv)
+            return procesarCsv(textoCsv);
+      } catch (error) {
+            console.error(error);
+            return [];
+      }
 }
 
 // Parser de CSV que respeta comas dentro de comillas
 function parseCsvLine(line: string): string[] {
-    const result: string[] = [];
-    let current = "";
-    let insideQuotes = false;
+      const result: string[] = [];
+      let current = "";
+      let insideQuotes = false;
 
-    for (let i = 0; i < line.length; i++) {
-        const char = line[i];
+      for (let i = 0; i < line.length; i++) {
+            const char = line[i];
 
-        if (char === '"') {
-            insideQuotes = !insideQuotes;
-        } else if (char === "," && !insideQuotes) {
-            result.push(current.trim());
-            current = "";
-        } else {
-            current += char;
-        }
-    }
-    result.push(current.trim());
-    return result;
+            if (char === '"') {
+                  insideQuotes = !insideQuotes;
+            } else if (char === "," && !insideQuotes) {
+                  result.push(current.trim());
+                  current = "";
+            } else {
+                  current += char;
+            }
+      }
+      result.push(current.trim());
+      return result;
 }
 
 function procesarCsv(csvText: string): Category[] {
-    const lineas: string[] = csvText.split(/\r?\n/);
-    const resultado: Category[] = [];
+      const lineas: string[] = csvText.split(/\r?\n/);
+      const resultado: Category[] = [];
 
-    for (let i = 1; i < lineas.length; i++) {
-        if (!lineas[i].trim()) continue;
+      for (let i = 1; i < lineas.length; i++) {
+            if (!lineas[i].trim()) continue;
 
-        const columnas: string[] = parseCsvLine(lineas[i]);
+            const columnas: string[] = parseCsvLine(lineas[i]);
 
-        const nuevaCategoria: Category = {
-            id: columnas[0] || "",
-            categoria: columnas[1] || "",
-            descripcion: columnas[2] || "",
-            imagenUrl: columnas[3] || "",
-            orden: Number(columnas[4]) || 0,
-            activo: (columnas[5] || "").toUpperCase() === "SI",
-        };
+            const nuevaCategoria: Category = {
+                  id: columnas[0] || "",
+                  categoria: columnas[1] || "",
+                  descripcion: columnas[2] || "",
+                  imagenUrl: parseDriveUrl(columnas[3] || ""),
+                  orden: Number(columnas[4]) || 0,
+                  activo: (columnas[5] || "").toUpperCase() === "SI",
+            };
 
-        resultado.push(nuevaCategoria);
-    }
+            resultado.push(nuevaCategoria);
+      }
 
-    // opcional: ordenar por "orden" y filtrar inactivas
-    return resultado
-        .filter((c) => c.activo)
-        .sort((a, b) => a.orden - b.orden);
+      // opcional: ordenar por "orden" y filtrar inactivas
+      return resultado
+            .filter((c) => c.activo)
+            .sort((a, b) => a.orden - b.orden);
 }
 

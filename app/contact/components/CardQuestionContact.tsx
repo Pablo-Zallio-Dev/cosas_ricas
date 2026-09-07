@@ -14,7 +14,7 @@ export default function CardQuestionContact({
 }: CardQuestionProps) {
       return (
             <section
-                  className=" flex flex-col gap-4 p-7 w-full md:w-3/4 border border-border bg-bgWhite rounded-3xl text-chocolate  lg:hover:-translate-y-0.5
+                  className=" flex flex-col gap-4 p-7 w-full md:w-3/4 lg:w-full border border-border bg-bgWhite rounded-3xl text-chocolate  lg:hover:-translate-y-0.5
       lg:hover:shadow-xl/10
       transition-all duration-150  "
             >

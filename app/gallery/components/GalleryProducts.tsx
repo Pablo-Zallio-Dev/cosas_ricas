@@ -69,7 +69,7 @@ export default function GalleryProducts() {
                               />
                         ))}
                   </section>
-                  <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 px-24 gap-8 lg:gap-18 justify-items-center">
+                  <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 px-8 2xl:px-36 gap-8 lg:gap-18 justify-items-center">
                         {filtered.map((product) => (
                               <CardGallery key={product.id} product={product} />
                         ))}

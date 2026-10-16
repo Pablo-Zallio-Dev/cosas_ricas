@@ -32,7 +32,7 @@ export default function Form() {
 
             const formData = {
                   ...data,
-                  access_key: "5de6d5e4-6d90-4eb6-8bc8-92a7b843af45" // 👈 Pega aquí tu llave
+                  access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY //  👈 Pega aquí tu llave
             };
 
             try {
@@ -64,7 +64,6 @@ export default function Form() {
                   setErrorShowModal(true)
             }
 
-            reset()
       };
 
       return (
@@ -80,7 +79,7 @@ export default function Form() {
             >
                   <h2 className=" font-cormorantGaramond text-2xl ">Cuentanos tu idea</h2>
                   <form
-                        onSubmit={handleSubmit(onSubmit)}
+                        onSubmit={handleSubmit(onSubmit, (errs) => console.log("errores:", errs))}
                         className=" flex flex-col gap-8 mt-8 "
                   >
                         <div className=" relative flex flex-col gap-2  ">
@@ -90,6 +89,7 @@ export default function Form() {
                                     placeholder="Tu nombre"
                                     type="text"
                                     id="name"
+                                    autoComplete="name"
                                     {...register("name", {
                                           required: true,
                                           minLength: 1
@@ -104,8 +104,9 @@ export default function Form() {
                               <input
                                     className=" py-3 px-4 bg-bgPink border border-border rounded-xl font-inter  "
                                     placeholder="email@email.com"
-                                    type="text"
+                                    type="email"
                                     id="email"
+                                    autoComplete="email"
                                     {...register("email", {
                                           required: true,
                                           pattern: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
@@ -125,6 +126,7 @@ export default function Form() {
                                     placeholder="Tu telefono"
                                     type="text"
                                     id="phone"
+                                    autoComplete="tel"
                                     {...register("phone", {
                                           required: true
                                     })}
@@ -134,7 +136,7 @@ export default function Form() {
                               }
                         </div>
                         <div className="relative flex flex-col gap-2 ">
-                              <label className="font-inter uppercase text-xs text-chocolate/70 tracking-widest" htmlFor="email">mensaje*</label>
+                              <label className="font-inter uppercase text-xs text-chocolate/70 tracking-widest" htmlFor="message">mensaje*</label>
                               <textarea
                                     className=" py-3 px-4 bg-bgPink border border-border rounded-xl font-inter resize-none  "
                                     placeholder="Cuentanos que nesecitas, fecha del evento, numero de personas..."

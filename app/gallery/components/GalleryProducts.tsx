@@ -4,40 +4,42 @@ import { useProductsStore } from "@/app/store/useFilterStore";
 import { useEffect } from "react";
 import CardGallery from "./CardGallery";
 import BtnGallery from "@/app/components/common/BtnGallery";
+import OrderGuide from "./OrderGuide";
+import TypesCakes from "./TypesCakes";
 
 export default function GalleryProducts() {
-  const setProduct = useProductsStore((state) => state.setProducts);
-  const products = useProductsStore((state) => state.products);
-  const activeCategory = useProductsStore((state) => state.activeCategory);
-  const setActiveCategory = useProductsStore(
-    (state) => state.setActiveCategory,
-  );
+      const setProduct = useProductsStore((state) => state.setProducts);
+      const products = useProductsStore((state) => state.products);
+      const activeCategory = useProductsStore((state) => state.activeCategory);
+      const setActiveCategory = useProductsStore(
+            (state) => state.setActiveCategory,
+      );
 
-  useEffect(() => {
-    const load = async () => {
-      const data = await getProducts();
-      setProduct(data);
-    };
+      useEffect(() => {
+            const load = async () => {
+                  const data = await getProducts();
+                  setProduct(data);
+            };
 
-    load();
-}, [setProduct]);
-console.log(products)
-  const categories = ["Todos", ...new Set(products.map((p) => p.category))];
+            load();
+      }, [setProduct]);
+      console.log(products)
+      const categories = ["Todos", ...new Set(products.map((p) => p.category))];
 
-  const filtered =
-    activeCategory === "Todos"
-      ? products
-      : products.filter((p) => p.category === activeCategory);
+      const filtered =
+            activeCategory === "Todos"
+                  ? products
+                  : products.filter((p) => p.category === activeCategory);
 
 
-      
-  if (products.length === 0) {
-    return (
-      <section className="flex flex-wrap justify-center items-center gap-6 py-14 px-2">
-        {Array.from({ length: 6 }).map((_, i) => (
-          <div
-            key={i}
-            className="
+
+      if (products.length === 0) {
+            return (
+                  <section className="flex flex-wrap justify-center items-center gap-6 py-14 px-2">
+                        {Array.from({ length: 6 }).map((_, i) => (
+                              <div
+                                    key={i}
+                                    className="
             flex flex-col gap-4
             p-2
             w-70
@@ -46,34 +48,38 @@ console.log(products)
             border border-border
             animate-pulse
           "
-          >
-            <div className=" w-full h-full bg-border rounded-xl "></div>
-          </div>
-        ))}
-      </section>
-    );
-  }
+                              >
+                                    <div className=" w-full h-full bg-border rounded-xl "></div>
+                              </div>
+                        ))}
+                  </section>
+            );
+      }
 
-  return (
-    <section className=" flex flex-col gap-12 w-full ">
-      <section className=" flex flex-wrap justify-center gap-3 mt-10  ">
-        {categories.map((cat) => (
-          <BtnGallery
-            key={cat}
-            activeCategory={activeCategory}
-            cat={cat}
-            onClick={() => setActiveCategory(cat)}
-            textBtn={cat === "all" ? "Todos" : cat}
-          />
-        ))}
-      </section>
-      <section className=" flex flex-wrap  gap-8 lg:gap-18 justify-center ">
-        {filtered.map((product) => (
-          <CardGallery key={product.id} product={product} />
-        ))}
-      </section>
-    </section>
-  );
+      return (
+            <section className=" flex flex-col gap-12 w-full ">
+                  <section className=" flex flex-wrap justify-center gap-3 mt-10  ">
+                        {categories.map((cat) => (
+                              <BtnGallery
+                                    key={cat}
+                                    activeCategory={activeCategory}
+                                    cat={cat}
+                                    onClick={() => setActiveCategory(cat)}
+                                    textBtn={cat === "all" ? "Todos" : cat}
+                              />
+                        ))}
+                  </section>
+                  <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 px-24 gap-8 lg:gap-18 justify-items-center">
+                        {filtered.map((product) => (
+                              <CardGallery key={product.id} product={product} />
+                        ))}
+                  </section>
+                  <section className=" flex flex-col items-center justify-center ">
+                        <TypesCakes />
+                        <OrderGuide />
+                  </section>
+            </section>
+      );
 }
 
 /* 

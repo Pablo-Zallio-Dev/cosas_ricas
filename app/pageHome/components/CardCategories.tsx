@@ -18,7 +18,7 @@ export default function CardCategories({ image, titleCard, textCard }: CardCateg
                   </section>
                   <section className=" flex flex-col gap-2  p-6 ">
                         <TitleCard titleCard={titleCard} />
-                        <Paragraph textParagraph={textCard} textSize={"textCard"} />
+                        <Paragraph textParagraph={textCard} textSize={"textCard"} className=" max-w-3/4 " />
                   </section>
             </section>
       )

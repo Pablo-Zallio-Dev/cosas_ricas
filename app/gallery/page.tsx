@@ -16,7 +16,7 @@ openGraph:{
 
 export default function PageGallery(){
       return(
-           <section className=" flex flex-col items-center pt-50 px-5  ">
+           <section className=" flex flex-col items-center pt-40 px-5  ">
            <SubtitleSection subtitleText={"Catálogo"} />
            <TitleSection titleText={"Nuestros Productos"} />
            <LineSeparate />

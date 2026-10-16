@@ -13,8 +13,8 @@ export default function CategorySection(){
                   <TitleSection titleText={"Pequeños placeres, grandes momentos"} />
                   </section>
                   <LineSeparate />
-                  <Paragraph center textParagraph={"¿Quieres una tarta diferente, creada especialmente para ti y para una ocasión importante? ¿Tienes un evento especial y quieres sorprender a todos tus invitados?"} textSize={"textSection"} />
-                  <Paragraph center textParagraph={"Elige un producto artesanal, creativo y hecho con productos de calidad, elaborado en nuestro obrador para que cada detalle sea especial."} textSize={"textSection"} />
+                  <Paragraph center textParagraph={"¿Quieres una tarta diferente, creada especialmente para ti y para una ocasión importante? ¿Tienes un evento especial y quieres sorprender a todos tus invitados?"} textSize={"textSection"} className=" w-3/4 lg:w-1/2 " />
+                  <Paragraph center textParagraph={"Elige un producto artesanal, creativo y hecho con productos de calidad, elaborado en nuestro obrador para que cada detalle sea especial."} textSize={"textSection"} className=" w-3/4 lg:w-1/2 " />
                   <GalleryCategorySection />
             </section>
       )

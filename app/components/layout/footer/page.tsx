@@ -42,12 +42,12 @@ export default function Footer() {
               +34 674 574 777
             </p>
           </div>
-          <div className=" flex gap-3 ">
+          {/* <div className=" flex gap-3 ">
             <Mail size={20} color="#ce3776" />
             <p className=" font-inter text-chocolate text-sm ">
               elisa@cosasricas2.com
             </p>
-          </div>
+          </div> */}
           <div className=" flex gap-3 ">
             <MapPinCheckInside size={20} color="#ce3776" />
             <p className=" font-inter text-chocolate text-sm ">
@@ -58,7 +58,7 @@ export default function Footer() {
       </section>
       <section className=" flex justify-around gap-12 w-full font-inter py-8 text-xs text-chocolate  ">
         <p className=" mx-6 text-center ">
-          © 2026 Cosas Ricas 2. Todos los derechos reservados.
+          © 2026 Cosas Ricas 2.
         </p>
         <p className=" mx-6 text-center ">
           Hecho con cariño y mucha mantequilla.

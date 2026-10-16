@@ -12,11 +12,12 @@ const textSizeParagraph: Record<ParagraphSize, string> = {
 export type ParagraphProps ={
       textParagraph: string,
       textSize: ParagraphSize,
-      center?: boolean
+      center?: boolean,
+      className?: string
 }
 
-export default function Paragraph( {textParagraph, textSize, center}: ParagraphProps ){
+export default function Paragraph( {textParagraph, textSize, center, className}: ParagraphProps ){
       return(
-            <p className={` w-11/12 max-w-2xl ${ textSizeParagraph[textSize]} ${center ?' text-center' : ''}  `}>{textParagraph}</p>
+            <p className={` ${ textSizeParagraph[textSize]} ${center ?' text-center' : ''} ${className} `}>{textParagraph}</p>
       )
 }

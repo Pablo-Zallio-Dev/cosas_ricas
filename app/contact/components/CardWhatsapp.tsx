@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function CardWhatsapp() {
 
-            const phoneNumber = "34123456789"; // Código de país (ej. 34 España) seguido del número
+            const phoneNumber = "34674574777"; // Código de país (ej. 34 España) seguido del número
 
 
       return (
@@ -15,7 +15,7 @@ export default function CardWhatsapp() {
                   <MessageCircle size={23} color={"#fbf6ee"} />
                   <h3 className=" mt-3 uppercase font-inter text-xs ">lo mas rapido</h3>
                   <h2 className=" font-cormorantGaramond text-2xl ">WhatsApp directo</h2>
-                  <p className=" font-inter text-sm ">+34 333 63 63 63</p>
+                  <p className=" font-inter text-sm ">+34 674 574 777</p>
             </Link>
       );
 }

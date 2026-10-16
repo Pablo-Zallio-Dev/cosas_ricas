@@ -46,10 +46,10 @@ export default function HeroSection() {
                   <section className="  ">
                        <section className=" relative lg:h-full  ">
                         <Image src={heroImage} alt={"Imagen de tarta en pagina principal  "} className=" lg:h-full lg:object-cover border border-cream rounded-4xl shadow-xl/20 " />
-                        <section className=" absolute -bottom-6 -left-4 p-4 flex flex-col gap-2 rounded-xl border border-border bg-white ">
+                        {/* <section className=" absolute -bottom-6 -left-4 p-4 flex flex-col gap-2 rounded-xl border border-border bg-white ">
                               <p className=" font-inter text-xs uppercase tracking-widest ">Tarta del mes</p>
                               <p className=" font-cormorantGaramond text-sm ">Dulce azul artesanal</p>
-                        </section>
+                        </section> */}
                        </section>
                   </section>
             </section>

@@ -24,12 +24,12 @@ export default function BtnPrimary({
       ${min ? ' w-min md:w-max ' : 'w-max'} py-3 px-6 
       text-chocolate font-medium font-inter
       rounded-full bg-linear-to-br from-[#fbedee] to-[#f9a3a7] md:hover:brightness-104
-      shadow-xl/10 md:hover:-translate-y-0.5 
+      shadow-xl/10 md:hover:-translate-y-1 
       md:transition-all md:duration-150
        `}
             >
                   {linkText}
-                  {Icon && <Icon size={ !iconMin ? 16 : 24 } color="#4c271a" />}
+                  {Icon && <Icon size={!iconMin ? 16 : 24} color="#4c271a" />}
             </Link>
       );
 }

@@ -16,16 +16,17 @@ export default function AboutSection() {
           alt={"Imagen de seccion about, trabajando en reposteria"}
         />
       </section>
-      <section className="  m-auto w-11/12">
+      <section className=" w-full  ">
         <SubtitleSection subtitleText={"sobre nosotros"} />
 
-        <TitleSection titleText={"Una historia que se hornea cada día."} className=" xl:px-10 2xl:px-18" />
+        <TitleSection titleText={"Una historia que se hornea cada día."} className=" pt-12 xl:px-10 2xl:px-18" />
 
         <Paragraph
           textParagraph={
             "Si echo la vista atrás, todos mis recuerdos empiezan en el mismo lugar: la cocina. Me veo charlando con mi madre y mis hermanas, observando con atención los secretos de mi tía al cocinar."
           }
           textSize={"textSection"}
+         
         />
         <Paragraph
           textParagraph={
@@ -43,7 +44,7 @@ export default function AboutSection() {
 
                 <Paragraph
           textParagraph={
-            "Hoy elaboramos nuestros productos con ingredientes naturales y productos propios de este país, buscando mantener ese sabor de toda la vida que nos conecta con nuestros recuerdos, pero adaptándonos también a las nuevas circunstancias, a las nuevas tendencias y, sobre todo, a las necesidades y deseos de nuestros clientes. Porque cada encargo es diferente y detrás de cada tarta hay una historia, una celebración y alguien que ha confiado en nosotros para formar parte de un momento especial. Cosas Ricas 2 es la unión entre lo que aprendimos ayer y todo lo que seguimos creando hoy."
+            "Hoy elaboramos nuestros productos con ingredientes naturales y productos propios de este país, buscando mantener ese sabor de toda la vida que nos conecta con nuestros recuerdos, pero adaptándonos también a las nuevas circunstancias, a las nuevas tendencias y, sobre todo, a las necesidades y deseos de nuestros clientes. Porque cada encargo es diferente y detrás de cada tarta hay una historia, una celebración y alguien que ha confiado en nosotros para formar parte de un momento especial."
           }
           textSize={"textSection"}
         />
@@ -55,7 +56,7 @@ export default function AboutSection() {
           textSize={"textSection"}
         />
 
-        <section className=" my-8 ">
+        <section className=" pt-12 my-8 ">
           <BtnSecondary
             icon={ArrowRight}
             linkText={"Conocenos mas"}

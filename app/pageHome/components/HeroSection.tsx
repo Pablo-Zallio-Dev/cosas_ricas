@@ -39,7 +39,7 @@ export default function HeroSection() {
                               </section>
                               <section className=" flex flex-col w-40 sm:w-max text-center items-center ">
                                     <ClockAlert size={22} color="#ce3776" />
-                                    <p className=" font-inter text-sm font-medium text-chocolate ">Sin prisas</p>
+                                    <p className=" font-inter text-sm font-medium text-chocolate ">Con puntualidad</p>
                               </section>
                         </section>
                   </section>

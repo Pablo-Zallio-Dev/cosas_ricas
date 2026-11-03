@@ -61,7 +61,7 @@ export default function Footer() {
           © 2026 Cosas Ricas 2.
         </p>
         <p className=" mx-6 text-center ">
-          Hecho con cariño y mucha mantequilla.
+         Elaborado con cariño y dedicación
         </p>
       </section>
     </section>

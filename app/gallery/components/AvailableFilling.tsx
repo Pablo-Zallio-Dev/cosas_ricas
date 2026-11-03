@@ -16,6 +16,7 @@ const AvailableFilling = () => {
   { id: 9, label: "Crema de queso con frutos rojos" },
   { id: 10, label: "Crema de limón" },
   { id: 11, label: "Mousse de pistacho" },
+  { id: 12, label: "Brigadeiro de chocolate blanco"},
 ];
   return (
     <div className=' flex flex-col items-center gap-2 w-full max-w-3xl p-10 mt-16 border border-border rounded-xl bg-bgWhite '>

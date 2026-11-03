@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function BtnFloatWhatsapp() {
 
-      const phoneNumber = "34123456789"; // Código de país (ej. 34 España) seguido del número
+      const phoneNumber = "34674574777"; // Código de país (ej. 34 España) seguido del número
 
 
       return (

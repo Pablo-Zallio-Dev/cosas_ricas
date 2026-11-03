@@ -8,10 +8,10 @@ const ProductSize = () => {
 
 
       return (
-            <section className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 my-10 w-full ">
+            <section className="flex flex-wrap justify-center gap-8 py-12 xl:w-3/4 ">
                   {
                         SIZES_DATA.map((product) => (
-                              <div key={product.id} className={` relative flex flex-col items-center gap-6 w-full p-6 border ${ product.mas_pedida ? 'border-pinkPrimary' : 'border-border' }  rounded-2xl bg-white lg:hover:-translate-y-2  lg:hover:shadow-2xl/10 transition-all duration-300 `}>
+                              <div key={product.id} className={` relative flex flex-col items-center gap-6 w-full  max-w-62 p-6 border ${ product.mas_pedida ? 'border-pinkPrimary' : 'border-border' }  rounded-2xl bg-white lg:hover:-translate-y-2  lg:hover:shadow-2xl/10 transition-all duration-300 `}>
                                     {
                                           product.mas_pedida &&
                                           <p className=" absolute -top-2.75 py-1 px-3 rounded-full text-[10px] font-inter text-white bg-pinkPrimary uppercase ">más pedida</p>

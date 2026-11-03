@@ -12,8 +12,8 @@ export default function InfoContact() {
                         icon={Clock}
                         title={"Horarios"}
                         info={[
-                              "- Lunes a viernes: 15:00 – 22:00",
-                              "- Sábado: 09:00 – 22:00",
+                              "- Lunes a viernes: 15:00 – 20:30",
+                              "- Sábado: 09:00 – 19:30",
                               "- Domingo: Cerrado",
                         ]}
                   />

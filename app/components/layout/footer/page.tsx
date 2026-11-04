@@ -4,6 +4,7 @@ import Paragraph from "../../common/Paragraph";
 import IconFooterFacebook from "./components/IconFooterFacebook";
 import IconFooterInstagram from "./components/IconFooterInstagram";
 import LinkFooter from "./components/LinkFooter";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -60,9 +61,9 @@ export default function Footer() {
         <p className=" mx-6 text-center ">
           © 2026 Cosas Ricas 2.
         </p>
-        <p className=" mx-6 text-center ">
-         Elaborado con cariño y dedicación
-        </p>
+        <div className=" mx-6 text-center ">
+         <p className=" inline ">Diseñado y desarrollado por:</p> <Link href={"https://pablozalliodev.vercel.app/"} className=" text-sm font-bold italic text-accent-foreground ">Pablo Zallio</Link>
+        </div>
       </section>
     </section>
   );
